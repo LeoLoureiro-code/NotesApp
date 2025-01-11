@@ -1,17 +1,34 @@
-//Light theme
-$light-theme-light-background: #E0E4EA;
-$light-theme-dark-background: #525866;
-$light-theme-title-color: #0E121B;
-$light-theme-text-black: #232530;
-$light-theme-text-gray: #525866;
 
-//Dark theme
-$dark-theme-light-background: #2B303B;
-$dark-theme-dark-background: #232530;
-$dark-theme-title-color: #FFFFFF;
-$dark-theme-text-white: #F3F5F8;
-$dark-theme-text-gray: #CACFD8;
+$themes:(
+    light:(
+        background-primary: #E0E4EA,
+        background-secondary: #525866,
+        title: #0E121B,
+        text-primary: #232530,
+        text-secondary:#525866,
+        button:#335CFF,
+        button-delete:#FB3748,
+    ),
+    dark:(
+        background-primary: #2B303B,
+        background-secondary: #232530,
+        title: #FFFFFF,
+        text-primary: #F3F5F8,
+        text-secondary:#CACFD8,
+        button:#335CFF,
+        button-delete:#FB3748,
+    )
+);
 
-
-$button: #335CFF;
-$delete-button: #FB3748;
+@mixin themify($themes) {
+    @each $name, $values in $themes {
+      .#{$name}-theme {
+        $theme-map: $values !global; 
+        @content;
+      } 
+    } 
+  }
+  
+  @function themed($map, $key) {
+    @return map-get($map, $key);
+  }
