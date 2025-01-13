@@ -1,13 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LoginPageComponent } from "../pages/login-page/login-page.component";
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, LoginPageComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'NoteTakingApp';
+
+  constructor(private themeService: ThemeService, private renderer: Renderer2) {}
+
+  toggleTheme(): void {
+    // Pass renderer here
+    this.themeService.toggleTheme(this.renderer);
+  }
 }
