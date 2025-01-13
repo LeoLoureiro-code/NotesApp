@@ -1,34 +1,51 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-$themes:(
-    light:(
-        background-primary: #E0E4EA,
-        background-secondary: #525866,
-        title: #0E121B,
-        text-primary: #232530,
-        text-secondary:#525866,
-        button:#335CFF,
-        button-delete:#FB3748,
-    ),
-    dark:(
-        background-primary: #2B303B,
-        background-secondary: #232530,
-        title: #FFFFFF,
-        text-primary: #F3F5F8,
-        text-secondary:#CACFD8,
-        button:#335CFF,
-        button-delete:#FB3748,
-    )
+$themes: (
+  light: (
+    background-primary: #e0e4ea,
+    background-secondary: #525866,
+    title: #0e121b,
+    text-primary: #232530,
+    text-secondary: #525866,
+    button: #335cff,
+    button-delete: #fb3748
+  ),
+  dark: (
+    background-primary: #2b303b,
+    background-secondary: #232530,
+    title: #ffffff,
+    text-primary: #f3f5f8,
+    text-secondary: #cacfd8,
+    button: #335cff,
+    button-delete: #fb3748
+  )
 );
 
 @mixin themify($themes) {
-    @each $name, $values in $themes {
-      .#{$name}-theme {
-        $theme-map: $values !global; 
-        @content;
-      } 
-    } 
+  @each $name, $values in $themes {
+    .#{$name}-theme {
+      background-color: map-get($values, background-primary);
+      color: map-get($values, text-primary);
+
+      button {
+        background-color: map-get($values, button);
+      }
+
+      .delete-btn {
+        background-color: map-get($values, button-delete);
+      }
+    }
   }
-  
-  @function themed($map, $key) {
-    @return map-get($map, $key);
-  }
+}
+
+@function themed($map, $key) {
+  @return map-get($map, $key);
+}
+
+/* Apply themes globally */
+@include themify($themes);
