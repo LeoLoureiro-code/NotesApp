@@ -8,7 +8,7 @@
 $themes: (
   light: (
     background-primary: #e0e4ea,
-    background-secondary: #525866,
+    background-secondary: #FFFFFF,
     title: #0e121b,
     text-primary: #232530,
     text-secondary: #525866,
@@ -31,6 +31,10 @@ $themes: (
     .#{$name}-theme {
       background-color: map-get($values, background-primary);
       color: map-get($values, text-primary);
+
+      main{
+        background-color: map-get($values, background-secondary);;
+      }
 
       button {
         background-color: map-get($values, button);
