@@ -32,8 +32,9 @@ $themes: (
       background-color: map-get($values, background-primary);
       color: map-get($values, text-primary);
 
+      //blocks
       main{
-        background-color: map-get($values, background-secondary);;
+        background-color: map-get($values, background-secondary);
       }
 
       button {
@@ -43,6 +44,19 @@ $themes: (
       .delete-btn {
         background-color: map-get($values, button-delete);
       }
+
+      //clasess
+      .title{
+        color: map-get($values , title );
+      }
+
+      .text-primary{
+        color: map-get($values , text-primary);
+      }
+
+      .text-secondary{
+        color: map-get($values , text-secondary);
+      } 
     }
   }
 }
