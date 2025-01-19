@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif
 }
 
 $themes: (
@@ -39,6 +40,9 @@ $themes: (
 
       button {
         background-color: map-get($values, button);
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 15px;
       }
 
       .delete-btn {
