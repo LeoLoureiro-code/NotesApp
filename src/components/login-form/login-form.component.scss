@@ -1,0 +1,54 @@
+
+.welcome-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 444px;
+    height: 232px;
+    position: relative;
+}
+
+label{
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.input-div{
+    width: 100%;
+}
+
+input{
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #adb4c4;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.anchor-forgot-password{
+    position: absolute;
+    right: 0%;
+    top: 40%;
+    font-size: 14px;
+}
+
+button{
+    width: 100%;
+    border: none;
+    height: 45px;
+    border-radius: 10px;
+}
