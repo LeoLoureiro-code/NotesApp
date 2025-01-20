@@ -45,6 +45,10 @@ $themes: (
         font-size: 15px;
       }
 
+      a{
+        color: map-get($values , text-secondary);
+      }
+
       .delete-btn {
         background-color: map-get($values, button-delete);
       }
