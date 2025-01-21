@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { LoginFormComponent } from "../../components/login-form/login-form.component";
+import { LoginComponent } from '../../components/login/login.component';
 import { ThemeService } from '../../services/theme.service';
-import { CommonModule } from '@angular/common';  
+import { CommonModule } from '@angular/common';
+import { RegisterComponent } from "../../components/register/register.component";  
 
 @Component({
   selector: 'login-page',
   standalone: true,
-  imports: [LoginFormComponent, CommonModule],  
+  imports: [LoginComponent, CommonModule, RegisterComponent],  
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss']
 })
