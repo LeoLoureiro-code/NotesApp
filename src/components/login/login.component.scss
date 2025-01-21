@@ -1,0 +1,132 @@
+
+main{
+    height: 618px;
+    width: 540px;
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+    @media (max-width: 700px) {
+        height: 603px;
+        width: 343px;
+        padding: 1rem;
+    }
+}
+
+.logo-div{
+    margin-bottom: 2rem;
+}
+
+.login-message{
+    text-align: center;
+    font-size: 14px;
+}
+
+.welcome-div{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+hr{
+    border: 1px solid rgba(160, 159, 159, 0.226);
+    width: 100%;
+    margin: 1rem 0  0.5rem 0;
+}
+
+.google-login{
+    width: 100%;
+}
+
+.google-login-text{
+    font-size: 14px;
+    margin: 0.5rem 0  1rem 0;
+    text-align: center;
+}
+
+.google-login-btn{
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px solid rgba(160, 159, 159, 0.226);
+    outline: none;
+    background-color: white !important;
+    color: black !important;
+}
+
+.text-no-account{
+    margin-top: 0.5rem;
+    font-size: 14px;
+}
+
+.anchor-sign-up{
+    text-decoration: none;
+}
+
+.welcome-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 444px;
+    height: 232px;
+    position: relative;
+    margin-top: 2rem;
+
+    @media (max-width: 700px){
+        width: 343px;
+        padding: 1rem;
+    }
+}
+
+label{
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.input-div{
+    width: 100%;
+}
+
+input{
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #adb4c4;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.anchor-forgot-password{
+    position: absolute;
+    right: 0%;
+    top: 40%;
+    font-size: 14px;
+
+    @media (max-width: 700px){
+        right: 5%;
+    }
+}
+
+button{
+    width: 100%;
+    border: none;
+    height: 45px;
+    border-radius: 10px;
+}
