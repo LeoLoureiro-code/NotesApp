@@ -100,6 +100,7 @@ label{
 
 .input-div{
     width: 100%;
+    position: relative;
 }
 
 input{
@@ -112,6 +113,15 @@ input{
     height: 40px;
     margin-bottom: 1rem;
 }
+
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
 
 .anchor-forgot-password{
     position: absolute;

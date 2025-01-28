@@ -60,9 +60,11 @@ main{
 
     .input-div{
         width: 100%;
+        position: relative;
     }
 
     input{
+   
         display: inline-block;
         width: 100%;
         padding: 0.5rem;
@@ -71,6 +73,14 @@ main{
         border: 1px solid #adb4c4;
         height: 40px;
         margin-bottom: 1rem;
+    }
+
+    .toggle-password {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 55%;
+        transform: translateY(-50%);
     }
 
     button{
