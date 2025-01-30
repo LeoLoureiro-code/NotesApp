@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-navigation',
+  selector: 'navigation',
   standalone: true,
   imports: [],
   templateUrl: './navigation.component.html',
