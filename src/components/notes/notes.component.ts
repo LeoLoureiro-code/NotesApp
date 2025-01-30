@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { NavigationComponent } from "../navigation/navigation.component";
 
 @Component({
-  selector: 'app-notes',
+  selector: 'notes',
   standalone: true,
-  imports: [],
+  imports: [NavigationComponent],
   templateUrl: './notes.component.html',
   styleUrl: './notes.component.scss'
 })
