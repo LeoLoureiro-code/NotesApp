@@ -7,5 +7,34 @@ aside{
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
-    padding: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
+    border-right: 1px solid hsla(0, 0%, 50%, 0.644);
+    height: 100vh;
+}
+
+.content-div{
+    height: 84px;
+    width: 240px;
+}
+
+.content-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.content, .tag{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.content-img, .tag-img{
+    margin-right: 1rem;
+}
+
+hr{
+    border: 1px solid hsla(0, 0%, 50%, 0.644);
+    width: 100%;
 }
