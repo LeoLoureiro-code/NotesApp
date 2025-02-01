@@ -1,7 +1,8 @@
-aside{
+.navigation-menu{
     position: absolute;
     left: 0%;
     top: 0%;
+    margin-right: 272px;
     width: 272px;
     display: flex;
     flex-direction: column;
@@ -10,7 +11,19 @@ aside{
     padding: 2rem 1rem 1rem 1rem;
     border-right: 1px solid hsla(0, 0%, 50%, 0.644);
     height: 100vh;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 }
+
+.logo-div{
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+
 
 .content-div{
     height: 84px;
