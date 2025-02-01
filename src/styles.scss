@@ -38,6 +38,10 @@ $themes: (
         background-color: map-get($values, background-secondary);
       }
 
+      .navigation-menu{
+        background-color: map-get($values, background-secondary);
+      }
+
       button {
         background-color: map-get($values, button);
         color: #ffffff;
