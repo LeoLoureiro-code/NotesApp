@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   login = ( form: NgForm) => {
     if (form.valid) {
-      this.http.post<AuthenticatedResponse>("https://localhost:7261/api/auth/login", this.credentials, {
+      this.http.post<AuthenticatedResponse>("https://localhost:5001/api/Login/login", this.credentials, {
         headers: new HttpHeaders({ "Content-Type": "application/json"})
       })
       .subscribe({
@@ -34,6 +34,8 @@ export class LoginComponent implements OnInit {
           const refreshToken = response.refreshToken;
           localStorage.setItem("jwt", token); 
           localStorage.setItem("refreshToken", refreshToken);
+          console.log(token);
+          console.log(refreshToken);
           this.invalidLogin = false; 
           this.router.navigate(["notes"]);
         },

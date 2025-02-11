@@ -129,6 +129,7 @@ input{
     right: 0%;
     top: 40%;
     font-size: 14px;
+    z-index: 2;
 
     @media (max-width: 700px){
         right: 5%;
@@ -140,4 +141,5 @@ button{
     border: none;
     height: 45px;
     border-radius: 10px;
+    cursor: pointer;
 }
