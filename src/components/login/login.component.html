@@ -1,30 +1,47 @@
 <main>
     <div class="logo-div">
-        <img src="/assets/../assets/images/logo.svg" alt="logo">
+        <img src="/assets/images/logo.svg" alt="logo">
     </div>
     <div class="welcome-div">
         <h1 class="title">Welcome to Notes</h1>
         <p class="text-secondary login-message">Please log in to continue</p>
     </div>
 
-<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-    <div class="input-div">
-        <label for="email">Email Address</label>
-        <input type="email" name="username" id="email" placeholder="email@example.com" [(ngModel)]="credentials.username"  required>
-    </div>
-    <a [routerLink]="['/forgot-password']"  class="anchor-forgot-password">Forgot</a>
-    <div class="input-div">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" [(ngModel)]="credentials.password" required>
-        <!-- <img src="assets/images/icon-show-password.svg" alt="" class="toggle-password"> -->
-    </div>
-    <button type="submit" onclick="">Login</button>
-</form>
-<hr>
-        <div class="google-login">
-            <p class="google-login-text text-secondary">Or log in with:</p>
-            <button class="google-login-btn">Google</button>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <div class="input-div">
+            <label for="email">Email Address</label>
+            <input type="email" name="username" id="email" placeholder="email@example.com" [(ngModel)]="credentials.username" required>
         </div>
-        <hr>
-        <p class="text-secondary text-no-account">No account yet? <a  [routerLink]="['/register']" class="text-primary anchor-sign-up">Sign up</a></p>
+        <a [routerLink]="['/forgot-password']" class="anchor-forgot-password">Forgot</a>
+        
+        <div class="input-div">
+            <label for="password">Password</label>
+            <input 
+                [type]="passwordVisible ? 'text' : 'password'" 
+                name="password" 
+                id="password"  
+                [(ngModel)]="credentials.password"  
+                required
+            >
+            <img 
+                [src]="passwordVisible ? 'assets/images/icon-hide-password.svg' : 'assets/images/icon-show-password.svg'"
+                alt="Eye icon" 
+                class="toggle-password"
+                (click)="togglePasswordVisibility()"
+            >
+        </div>
+        
+        <button type="submit">Login</button>
+    </form>
+    
+    <hr>
+    <div class="google-login">
+        <p class="google-login-text text-secondary">Or log in with:</p>
+        <button class="google-login-btn">Google</button>
+    </div>
+    <hr>
+    <p class="text-secondary text-no-account">
+        No account yet? 
+        <a [routerLink]="['/register']" class="text-primary anchor-sign-up">Sign up</a>
+    </p>
 </main>
