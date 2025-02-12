@@ -16,32 +16,33 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 export class LoginComponent implements OnInit {
  
   invalidLogin: boolean;
-  credentials: LoginModel = {username:'', password:''};
-  constructor(private router: Router, private http: HttpClient) { }
+  credentials: LoginModel = { username: '', password: '' };
+  passwordVisible: boolean = false; // ✅ Declare password visibility state
 
-  ngOnInit(): void {
-    
-  }
+  constructor(private router: Router, private http: HttpClient) {}
 
-  login = ( form: NgForm) => {
+  ngOnInit(): void {}
+
+  login(form: NgForm) {
     if (form.valid) {
       this.http.post<AuthenticatedResponse>("https://localhost:5001/api/Login/login", this.credentials, {
-        headers: new HttpHeaders({ "Content-Type": "application/json"})
+        headers: new HttpHeaders({ "Content-Type": "application/json" })
       })
       .subscribe({
         next: (response: AuthenticatedResponse) => {
-          const token = response.token;
-          const refreshToken = response.refreshToken;
-          localStorage.setItem("jwt", token); 
-          localStorage.setItem("refreshToken", refreshToken);
-          console.log(token);
-          console.log(refreshToken);
+          localStorage.setItem("jwt", response.token); 
+          localStorage.setItem("refreshToken", response.refreshToken);
+          console.log(response.token);
+          console.log(response.refreshToken);
           this.invalidLogin = false; 
           this.router.navigate(["notes"]);
         },
         error: (err: HttpErrorResponse) => this.invalidLogin = true
-      })
+      });
     }
   }
- 
+
+  togglePasswordVisibility() {
+    this.passwordVisible = !this.passwordVisible;
+  }
 }
