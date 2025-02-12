@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
  
   invalidLogin: boolean;
   credentials: LoginModel = { username: '', password: '' };
-  passwordVisible: boolean = false; // ✅ Declare password visibility state
+  passwordVisible: boolean = false; 
 
   constructor(private router: Router, private http: HttpClient) {}
 
