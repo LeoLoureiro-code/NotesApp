@@ -10,7 +10,7 @@
     <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
         <div class="input-div">
             <label for="email">Email Address</label>
-            <input type="email" name="username" id="email" placeholder="email@example.com" [(ngModel)]="credentials.username" required>
+            <input type="email" name="username" id="email" placeholder="email@example.com" [(ngModel)]="credentials.UserEmail" required>
         </div>
         <a [routerLink]="['/forgot-password']" class="anchor-forgot-password">Forgot</a>
         
@@ -20,7 +20,7 @@
                 [type]="passwordVisible ? 'text' : 'password'" 
                 name="password" 
                 id="password"  
-                [(ngModel)]="credentials.password"  
+                [(ngModel)]="credentials.UserPassword"  
                 required
             >
             <img 

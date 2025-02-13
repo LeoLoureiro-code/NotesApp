@@ -16,7 +16,9 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 export class LoginComponent implements OnInit {
  
   invalidLogin: boolean;
-  credentials: LoginModel = { username: '', password: '' };
+
+  //400: Bad request. Fix this
+  credentials: LoginModel = { UserPassword: '', UserEmail: '' };
   passwordVisible: boolean = false; 
 
   constructor(private router: Router, private http: HttpClient) {}
@@ -24,8 +26,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login(form: NgForm) {
+    console.log(this.credentials);
     if (form.valid) {
-      this.http.post<AuthenticatedResponse>("https://localhost:5001/api/Login/login", this.credentials, {
+      this.http.post<AuthenticatedResponse>("https://localhost:7261/api/Login/login", this.credentials, {
         headers: new HttpHeaders({ "Content-Type": "application/json" })
       })
       .subscribe({
