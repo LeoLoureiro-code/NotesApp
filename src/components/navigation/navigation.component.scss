@@ -28,6 +28,10 @@
 .content-div{
     height: 84px;
     width: 240px;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 }
 
 .content-list{
@@ -35,6 +39,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+
+.tags-div{
+    
+    @media (max-width: 900px) {
+        display: none;
+    }
 }
 
 .content, .tag{
@@ -50,4 +65,30 @@
 hr{
     border: 1px solid hsla(0, 0%, 50%, 0.644);
     width: 100%;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+
+.mobile-menu{
+    display: none;
+    list-style: none;
+
+    @media (max-width: 900px) {
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        height: 74px;
+        align-items: center;
+        justify-content: space-evenly;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.mobile-menu-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
