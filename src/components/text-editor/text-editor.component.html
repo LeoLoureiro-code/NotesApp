@@ -1,0 +1,35 @@
+<div class="text-editor-div">
+    <div class="toolbar">
+        <button (click)="formatText('bold')"><b>B</b></button>
+        <button (click)="formatText('italic')"><i>I</i></button>
+        <button (click)="formatText('underline')"><u>U</u></button>
+        <button (click)="formatText('insertOrderedList')">1.</button>
+        <button (click)="formatText('insertUnorderedList')">•</button>
+        
+        <!-- Text Size Selector -->
+        <select (change)="changeTextSize($event)">
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="16px" selected>16px</option>
+          <option value="18px">18px</option>
+          <option value="20px">20px</option>
+          <option value="24px">24px</option>
+          <option value="28px">28px</option>
+        </select>
+      </div>
+    
+    <div class="editor"
+    contenteditable="true"
+    (input)="onContentChange($event)"
+    #editor>>
+        Start typing here...
+    </div>
+    <div class="text-editor-options">
+        <button class="btn save-btn" (click)="saveContent()">Save Note</button>
+        <button class="btn delete-btn" (click)="saveContent()">Delete Note</button>
+    </div>
+</div>
+
+
+
+

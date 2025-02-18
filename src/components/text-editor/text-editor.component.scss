@@ -1,0 +1,20 @@
+
+.text-editor-div{
+    margin-left: 272px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 900px) {
+        margin-left: 0;
+    }
+}
+
+.toolbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.editor{
+    height: calc(100vh - 200px);
+}
