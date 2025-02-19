@@ -1,10 +1,8 @@
 <div class="text-editor-div">
     <div class="toolbar">
-        <button (click)="formatText('bold')"><b>B</b></button>
-        <button (click)="formatText('italic')"><i>I</i></button>
-        <button (click)="formatText('underline')"><u>U</u></button>
-        <button (click)="formatText('insertOrderedList')">1.</button>
-        <button (click)="formatText('insertUnorderedList')">•</button>
+        <button (click)="formatText('bold')" class="toolbar-text-format-btn"><b>B</b></button>
+        <button (click)="formatText('italic')" class="toolbar-text-format-btn"><i>I</i></button>
+        <button (click)="formatText('underline')" class="toolbar-text-format-btn"><u>U</u></button>
         
         <!-- Text Size Selector -->
         <select (change)="changeTextSize($event)">
