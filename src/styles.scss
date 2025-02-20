@@ -14,7 +14,8 @@ $themes: (
     text-primary: #232530,
     text-secondary: #525866,
     button: #335cff,
-    button-delete: #fb3748
+    button-delete: #fb3748,
+    button-text-options: #ffffff,
   ),
   dark: (
     background-primary: #2b303b,
@@ -23,7 +24,8 @@ $themes: (
     text-primary: #f3f5f8,
     text-secondary: #cacfd8,
     button: #335cff,
-    button-delete: #fb3748
+    button-delete: #fb3748,
+    button-text-options: #C4C7C7,
   )
 );
 
@@ -38,9 +40,10 @@ $themes: (
         background-color: map-get($values, background-secondary);
       }
 
-      .navigation-menu{
+      header{
         background-color: map-get($values, background-secondary);
       }
+      
 
       button {
         background-color: map-get($values, button);
@@ -58,6 +61,11 @@ $themes: (
       }
 
       //clasess
+
+      .navigation-menu, .mobile-menu{
+        background-color: map-get($values, background-secondary);
+      }
+
       .title{
         color: map-get($values , title );
       }
@@ -69,6 +77,10 @@ $themes: (
       .text-secondary{
         color: map-get($values , text-secondary);
       } 
+
+      .toolbar-text-format-btn{
+        background-color: map-get($values, button-text-options);
+      }
     }
   }
 }
