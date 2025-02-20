@@ -10,30 +10,44 @@
 }
 
 .toolbar{
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
+    max-width: 250px;
     align-items: center;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .toolbar-text-format-btn{
-    background-color: grey !important;
-    min-width: 50px;
-    border-radius: 10px;
+    width: 50px;
     height: 30px;
-    border: none;
+    border: 1px solid black;
     outline: none;
+    color: black;
     cursor: pointer;
 }
-.toolbar-text-format-btn:hover{
-    background-color: rgb(199, 196, 196) !important;
+
+.toolbar-text-format-btn:focus{
+    background-color: rgb(212, 210, 210) !important;
+    border: 1px solid black;
 }
 
-.toolbar-text-format-btn:active{
-    background-color: azure !important;
+select{
+    height: 30px;
+    width: 50px;
 }
-
 
 .editor{
-    height: calc(100vh - 200px);
+    height: calc(100vh - 280px);
+    padding: 1.5rem;
+    outline: none;
+}
+
+.btn{
+    height: 50px;
+    width: 175px;
+    border: none;
+    border-radius: 10px;
+    margin: 0.5rem;
 }

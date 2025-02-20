@@ -58,4 +58,9 @@ export class TextEditorComponent {
   saveContent() {
     console.log("Saved Content:", this.editor.nativeElement.innerHTML);
   }
+
+  deleteContent() {
+    console.log("Saved Content:", this.editor.nativeElement.innerHTML);
+  }
+  
 }
