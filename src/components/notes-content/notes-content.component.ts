@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TextEditorComponent } from "../text-editor/text-editor.component";
 
 @Component({
-  selector: 'app-notes-content',
+  selector: 'notes-content',
   standalone: true,
-  imports: [],
+  imports: [TextEditorComponent],
   templateUrl: './notes-content.component.html',
   styleUrl: './notes-content.component.scss'
 })
