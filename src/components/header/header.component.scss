@@ -1,4 +1,4 @@
-header{
+.header-desktop{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,9 +8,22 @@ header{
     top: 0;
     left: 272px;
     width: calc(100% - 272px);
+    border-bottom: 1px solid hsla(0, 0%, 50%, 0.644);
 
-    @media (max-width: 900px) {
+    @media (max-width: 1150px) {
         display: none;
+    }
+}
+
+.header-mobile{
+    display: none;
+
+    @media (max-width: 1150px) {
+        height: 81px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 3rem;
     }
 }
 
