@@ -1,5 +1,51 @@
 .all-notes-div{
-    height: 100vh;
+    height: calc(100vh - 81px);
     width: 290px;
     margin-left: 272px;
+    border-right: 1px solid hsla(0, 0%, 50%, 0.644);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1150px) {
+        display: none;
+    }
+
+    .create-note-btn{
+        height: 40px;
+        width: 240px;
+        margin-top: 2rem;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .notes-list-div{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .note-item{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .note-item-tags-div{
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+       
+    }
+
+    .note-item-tag{
+        margin: 0.5rem;
+        border-radius: 5px;
+        padding: 5px;
+    }
 }
