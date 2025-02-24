@@ -40,11 +40,6 @@ $themes: (
         background-color: map-get($values, background-secondary);
       }
 
-      header{
-        background-color: map-get($values, background-secondary);
-      }
-      
-
       button {
         background-color: map-get($values, button);
         color: #ffffff;
@@ -62,8 +57,17 @@ $themes: (
 
       //clasess
 
+    
       .navigation-menu, .mobile-menu{
         background-color: map-get($values, background-secondary);
+      }
+
+      .header-desktop{
+        background-color: map-get($values, background-secondary);
+      }
+
+      .header-mobile{
+        background-color: map-get($values, background-primary);
       }
 
       .title{
@@ -80,6 +84,11 @@ $themes: (
 
       .toolbar-text-format-btn{
         background-color: map-get($values, button-text-options);
+      }
+
+      .note-item-tag{
+        background-color: map-get($values, background-primary);
+        color: map-get($values, text-primary);
       }
     }
   }
