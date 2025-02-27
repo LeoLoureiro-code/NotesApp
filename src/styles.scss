@@ -105,18 +105,24 @@ $themes: (
 //Grid
 
 $columns: 24;
-$gap: 16px; 
+$gap: 16px;
 
 // Grid container
 .grid {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
+  grid-auto-rows: minmax(100px, auto);
   gap: $gap;
 }
 
 // Mixin for column span
 @mixin grid-col($col-span) {
   grid-column: span $col-span;
+}
+
+// Mixin for row span
+@mixin grid-row($row-span) {
+  grid-row: span $row-span;
 }
 
 // Responsive breakpoints
@@ -130,6 +136,13 @@ $breakpoints: (
 @mixin responsive-grid($size, $col-span) {
   @media (min-width: map-get($breakpoints, $size)) {
     grid-column: span $col-span;
+  }
+}
+
+// Mixin for responsive grid rows
+@mixin responsive-grid-row($size, $row-span) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    grid-row: span $row-span;
   }
 }
 
