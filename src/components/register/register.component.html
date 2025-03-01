@@ -1,5 +1,5 @@
 
-<main>
+<main class="grid">
     <div class="logo-div">
         <img src="/assets/../assets/images/logo.svg" alt="logo">
     </div>
@@ -24,8 +24,13 @@
         </div>
         <button class="register-btn">Sign Up</button>
     </form>
-            <div class="google-login">
-                <p class="google-login-text text-secondary">Or log in with:</p>
-                <button class="google-login-btn">Google</button>
-            </div>
+    <div class="google-login">
+        <p class="google-login-text text-secondary">Or log in with:</p>
+        <button class="google-login-btn">Google</button>
+    </div>
+    <div class="login-div">
+        <p class="login-paragraph">
+            Already have an account? <a [routerLink]="['/login']" class="text-primary anchor-login">Login</a>
+        </p>
+    </div>
 </main>
