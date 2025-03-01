@@ -1,4 +1,4 @@
-<main>
+<main class="grid">
     <div class="logo-div">
         <img src="/assets/images/logo.svg" alt="logo">
     </div>
@@ -33,15 +33,16 @@
         
         <button type="submit">Login</button>
     </form>
-    
     <hr>
     <div class="google-login">
         <p class="google-login-text text-secondary">Or log in with:</p>
         <button class="google-login-btn">Google</button>
     </div>
     <hr>
-    <p class="text-secondary text-no-account">
-        No account yet? 
-        <a [routerLink]="['/register']" class="text-primary anchor-sign-up">Sign up</a>
-    </p>
+    <div class="no-account-div">
+        <p class="text-secondary text-no-account">
+            No account yet? 
+            <a [routerLink]="['/register']" class="text-primary anchor-sign-up">Sign up</a>
+        </p>
+    </div>
 </main>
