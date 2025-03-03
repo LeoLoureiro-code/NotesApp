@@ -1,9 +1,8 @@
-main{
-    width: 100vw;
-    height: 100vh;
-}
+@import "../../styles.scss";
 
-.note-div{
-    margin-left: 272px;
-    display: flex;
+
+:host {
+    @include grid-col(12);
+    @include grid-row(12);
+
 }
