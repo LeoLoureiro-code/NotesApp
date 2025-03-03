@@ -1,26 +1,50 @@
-
+@import "../../styles.scss";
 //To do: Make it take the rest of the page
 
-.text-editor-div{
-    width: 100%;
-    height: calc(100vh - 81px);
-    display: flex;
-    flex-direction: column;
+:host{
+    @include grid-col(10);
+    @include grid-row(10);
 
     @media (max-width: 1150px) {
-        margin-left: 0;
-        width: 100vw;
+        @include grid-col(10);
+        @include grid-row(9);
 
     }
 }
 
+.text-editor-div{
+    display: grid;
+    grid-template-rows: repeat(11, 1fr);
+
+    @include responsive-grid(md, 12);
+
+    @media (max-width: 1150px) {
+        @include grid-col(12);
+        @include grid-row(11);
+    }
+}
+
+.text-details{
+    @include grid-col(12);
+    @include grid-row(1);
+}
+
+#title{
+    height: 80px;
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    font-size: 40px;
+}
+
 .toolbar{
+    @include grid-col(12);
+    @include grid-row(1);
+    width: 300px;
     display: flex;
     justify-content: space-evenly;
-    max-width: 250px;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 
     @media (max-width: 1150px) {
         margin-left: 0;
@@ -55,16 +79,21 @@ select{
 }
 
 .editor{
-    height: calc(100vh - 81px);
+    @include grid-col(12);
+    @include grid-row(10);
     padding: 1.5rem;
     outline: none;
-    background-color: aqua;
     display: block;
-    width: 100%;
 
     @media (max-width: 1150px) {
-        width: 100%;
+        @include grid-col(12);
+        @include grid-row(10);
     }
+}
+
+.text-editor-options{
+    @include grid-col(12);
+    @include grid-row(1);
 }
 
 .btn{
