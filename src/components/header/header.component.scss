@@ -1,13 +1,20 @@
+@import "../../styles.scss";
+
+:host{
+    @include grid-col(12);
+    @include grid-row(1);
+
+    @media (max-width: 1150px) {
+        display: none;
+    }
+}
+
 .header-desktop{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem 0 2rem;
-    position: relative;
     height: 81px;
-    top: 0;
-    left: 272px;
-    width: calc(100% - 272px);
     border-bottom: 1px solid hsla(0, 0%, 50%, 0.644);
 
     @media (max-width: 1150px) {
