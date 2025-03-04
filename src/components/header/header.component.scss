@@ -1,12 +1,9 @@
 @import "../../styles.scss";
 
 :host{
-    @include grid-col(12);
-    @include grid-row(1);
 
-    @media (max-width: 1150px) {
-        display: none;
-    }
+    @include grid-col(12);
+
 }
 
 .header-desktop{
