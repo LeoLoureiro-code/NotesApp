@@ -1,6 +1,7 @@
 @import "../../styles.scss";
 
 main{
+    grid-template-rows: repeat(8, 1fr) !important;
     max-width: 540px;
     padding: 2rem;
     display: flex;
