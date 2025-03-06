@@ -1,8 +1,8 @@
 @import "../../styles.scss";
 
 :host{
-
     @include grid-col(12);
+    @include grid-row(1);
 
 }
 

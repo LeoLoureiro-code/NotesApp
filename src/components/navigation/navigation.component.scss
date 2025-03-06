@@ -1,11 +1,11 @@
 @import "../../styles.scss";
 
 :host{
-    display: grid;
+    @include grid-col(1);
+    @include grid-row(12);
 }
 
 .navigation-menu{
-    @include grid-col(1);
     width: 272px;
     display: flex;
     flex-direction: column;
