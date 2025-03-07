@@ -1,0 +1,9 @@
+@import "../../styles.scss";
+
+.mobile-menu-div {
+    @include grid-col(12);
+
+    @media (min-width: 1150px) {
+        display: none; 
+    }
+}
