@@ -4,13 +4,17 @@
 :host{
     @include grid-col(10);
     @include grid-row(11);
+
+    @media (max-width: 1150px) {
+        @include grid-col(12);
+    }
+
 }
 
 .text-editor-div{
     display: grid;
+    height: 100%;
     grid-template-rows: repeat(11, 1fr);
-
-    @include responsive-grid(md, 12);
 
     @media (max-width: 1150px) {
     
@@ -68,17 +72,20 @@ select{
 }
 
 .editor{
+    @include grid-row(9);
     padding: 1.5rem;
     outline: none;
     display: block;
 
     @media (max-width: 1150px) {
-
+        @include grid-row(12);
     }
 }
 
 .text-editor-options{
-
+    display: flex;
+    justify-content: end;
+    padding: 0.5rem;
 }
 
 .btn{
