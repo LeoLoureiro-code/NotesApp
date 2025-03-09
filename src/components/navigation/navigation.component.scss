@@ -3,6 +3,10 @@
 :host{
     @include grid-col(1);
     @include grid-row(12);
+    
+    @media (max-width: 1150px) {
+        display: none;
+    }
 }
 
 .navigation-menu{
@@ -66,36 +70,7 @@
     margin-right: 1rem;
 }
 
-.mobile-menu-div {
-    @include grid-col(12);
 
-    @media (min-width: 1150px) {
-        display: none; 
-    }
-}
-
-.mobile-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style: none;
-
-    @media (min-width: 1150px) {
-        display: none; 
-    }
-}
-
-.mobile-menu-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-
-    .mobile-menu-title{
-        margin-top: 0.5rem;
-    }
-}
 
 .right-border-item{
     border-right: 1px solid #8080803d;
