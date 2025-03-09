@@ -112,7 +112,7 @@ $gap: 16px;
 .grid {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
-  grid-template-rows: repeat($row, 1fr);
+  grid-template-rows: repeat(12, minmax(0, 1fr));
   column-gap: $gap;
 
   
@@ -133,7 +133,7 @@ $gap: 16px;
 $breakpoints: (
   sm: 600px,
   md: 900px,
-  lg: 1200px
+  lg: 1150px
 );
 
 // Mixin for responsive grid columns
