@@ -1,0 +1,13 @@
+<div class="modal-div" *ngIf="isVisible" (click)="close()">
+
+    <div class="modal" (click)="$event.stopPropagation()">
+        <h1 class="modal-title">Title</h1>
+        <p class="modal-paragraph">Paragraph</p>
+        <hr>
+        <div class="modal-button-div">
+            <button class="modal-cancel" (click)="close()">Cancel</button>
+            <button class="modal-accept" (click)="confirmAction.emit()">{{modalAccept}}</button>
+        </div>
+    </div>
+
+</div>
