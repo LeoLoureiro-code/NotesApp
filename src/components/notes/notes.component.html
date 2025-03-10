@@ -1,4 +1,12 @@
 <main class="grid">
+    <modal 
+    *ngIf="isVisible"
+    [isVisible]="isVisible"
+    (closeModal)="closeModal()"
+    (confirmAction)="handleConfirmAction()">
+    </modal>
+
+
     <header-component></header-component>
     <navigation></navigation> 
     <all-notes></all-notes> 
