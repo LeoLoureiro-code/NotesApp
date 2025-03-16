@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { NgForm, FormsModule } from '@angular/forms';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { ApiService } from '../../services/api.service'; 
 import { AuthenticatedResponse } from '../../interfaces/AuthenticatedResponse';
 import { LoginModel } from '../../interfaces/loginModel';
-import { Router } from '@angular/router';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'login',
@@ -14,20 +14,26 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
   styleUrl: './login.component.scss'
 })
 export class LoginComponent implements OnInit {
- 
-  invalidLogin: boolean;
+  email = '';
+  password = '';
+  invalidLogin: boolean = false;
+  passwordVisible: boolean = false;
 
-  //400: Bad request. Fix this
+
+  private router = inject(Router);
+  private apiService = inject(ApiService); 
+
   credentials: LoginModel = { UserPassword: '', UserEmail: '' };
-  passwordVisible: boolean = false; 
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
 
   login(form: NgForm) {
-    console.log(this.credentials);
     if (form.valid) {
+      this.credentials.UserEmail = this.email; 
+      this.credentials.UserPassword = this.password; 
+
       this.http.post<AuthenticatedResponse>("https://localhost:7261/api/Login/login", this.credentials, {
         headers: new HttpHeaders({ "Content-Type": "application/json" })
       })
@@ -38,9 +44,12 @@ export class LoginComponent implements OnInit {
           console.log(response.token);
           console.log(response.refreshToken);
           this.invalidLogin = false; 
-          this.router.navigate(["notes"]);
+          this.router.navigate(["/notes"]);
         },
-        error: (err: HttpErrorResponse) => this.invalidLogin = true
+        error: (err: HttpErrorResponse) => {
+          console.error('Login error:', err);
+          this.invalidLogin = true;
+        }
       });
     }
   }
