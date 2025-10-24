@@ -1,0 +1,25 @@
+@use './variables' as *;
+
+@use './themes/light-theme' as light;
+@use './themes/dark-theme' as dark;
+
+.light-theme{
+
+    --background-login-color: #{light.$backgound-login-color};
+    --background-color: #{light.$background-color};
+    --login-color: #{light.$text-primary};
+    --text-secondary: #{light.$text-secondary};
+    --button-primary: #{light.$button-primary};
+    --button-secondary: #{light.$button-secondary};
+}
+
+.dark-theme{
+
+    --background-login-color: #{dark.$backgound-login-color};
+    --background-color: #{dark.$background-color};
+    --login-color: #{dark.$text-primary};
+    --text-secondary: #{dark.$text-secondary};
+    --button-primary: #{dark.$button-primary};
+    --button-secondary: #{dark.$button-secondary};
+
+}
