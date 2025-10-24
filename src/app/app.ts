@@ -9,4 +9,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('NoteTakingApp');
+
+  toggleTheme(isDark: boolean) {
+  document.body.classList.remove('light-theme', 'dark-theme');
+  document.body.classList.add(isDark ? 'dark-theme' : 'light-theme');
+}
 }
