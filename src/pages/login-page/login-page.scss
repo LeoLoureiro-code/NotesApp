@@ -2,9 +2,13 @@
     height: 623px;
     width: 540px;
     position: absolute;
-    background-color: aqua;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -54%);
-    
+    display: flex;
+    justify-content: center;
+}
+
+.logo-div{
+    margin-top: 3rem;
 }
