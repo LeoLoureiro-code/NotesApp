@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@use "styles/themes.scss" as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login{
+    background-color: (--background-login-color);
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+.btn{
+    width: 444px;
+    height: 44px;
+    background-color: var(--button-primary);
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
