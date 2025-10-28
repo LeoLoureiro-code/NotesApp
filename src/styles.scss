@@ -1,5 +1,10 @@
 @use "styles/themes.scss" as *;
 
+//Variables
+$mobile: 480px;
+$tablet: 767px;
+$laptop: 1025px;
+
 *{
     margin: 0;
     padding: 0;
@@ -15,8 +20,6 @@ body{
 }
 
 .btn{
-    width: 444px;
-    height: 44px;
     background-color: var(--button-primary);
     border-radius: 10px;
     border: none;
