@@ -38,6 +38,11 @@ form{
             border: none;
             margin-top: 0.5rem;
             padding: 0.5rem;
+
+              @media (max-width: $mobile){
+                    width: 311px;
+        }  
+
         }
 
             .forgot-password-anchor{
@@ -47,4 +52,23 @@ form{
                 font-size: 13px;
             }
         }
+        .login-btn{
+            width: 444px;
+            height: 44px;
+
+                @media (max-width: $mobile){
+                    width: 311px;
+        }  
+        }
+}
+
+.signup-paragraph{
+    font-size: 15px;
+    text-align: center;
+
+    .signup-anchor{
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
 }
