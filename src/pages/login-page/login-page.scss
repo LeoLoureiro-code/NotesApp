@@ -1,3 +1,5 @@
+@use "../../styles.scss" as *;
+
 .container-div{
     height: 623px;
     width: 540px;
@@ -11,6 +13,11 @@
     font-family: Arial;
     background-color: aqua;
     border-radius: 10px;
+
+   @media (max-width: $mobile){
+        height: 603px;
+        width: 343px;
+   } 
 }
 
 .logo-div{
