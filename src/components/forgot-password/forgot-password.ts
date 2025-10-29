@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-forgot-password',
+  selector: 'forgot-password',
   imports: [],
   templateUrl: './forgot-password.html',
   styleUrl: './forgot-password.scss'
