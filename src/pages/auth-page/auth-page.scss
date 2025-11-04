@@ -1,7 +1,7 @@
 @use "../../styles.scss" as *;
 
 .container-div{
-    // height: 623px;
+    height: 523px;
     width: 540px;
     position: absolute;
     left: 50%;
@@ -15,7 +15,7 @@
     border-radius: 10px;
 
    @media (max-width: $mobile){
-        // height: 603px;
+        height: 503px;
         width: 343px;
    } 
 }
