@@ -1,5 +1,9 @@
 @use "../../../styles.scss" as *;
 
+.login-div{
+    padding: 1rem;
+}
+
 .title{
     font-size: 26px;
     text-align: center;
@@ -50,6 +54,8 @@ form{
                 right: 0;
                 top: -3%;
                 font-size: 13px;
+                text-decoration: none;
+                color: #0E121B;
             }
         }
         .login-btn{
@@ -58,7 +64,7 @@ form{
 
                 @media (max-width: $mobile){
                     width: 311px;
-        }  
+            }  
         }
 }
 
@@ -69,6 +75,6 @@ form{
     .signup-anchor{
         text-decoration: none;
         color: black;
-        font-weight: 500;
+        font-weight: 700;
     }
 }
