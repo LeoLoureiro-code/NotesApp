@@ -1,7 +1,7 @@
 @use "../../styles.scss" as *;
 
 .container-div{
-    height: 523px;
+    // height: 523px;
     width: 540px;
     position: absolute;
     left: 50%;
@@ -11,11 +11,10 @@
     align-items:center;
     flex-direction: column;
     font-family: Arial;
-    background-color: aqua;
     border-radius: 10px;
 
    @media (max-width: $mobile){
-        height: 503px;
+        // height: 503px;
         width: 343px;
    } 
 }
