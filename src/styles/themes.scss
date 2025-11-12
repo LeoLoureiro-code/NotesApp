@@ -5,7 +5,7 @@
 
 .light-theme{
 
-    --background-login-color: #{light.$backgound-login-color};
+    --background-login-color: #{light.$background-login-color};
     --background-color: #{light.$background-color};
     --login-color: #{light.$text-primary};
     --text-secondary: #{light.$text-secondary};
@@ -15,7 +15,7 @@
 
 .dark-theme{
 
-    --background-login-color: #{dark.$backgound-login-color};
+    --background-login-color: #{dark.$background-login-color};
     --background-color: #{dark.$background-color};
     --login-color: #{dark.$text-primary};
     --text-secondary: #{dark.$text-secondary};
