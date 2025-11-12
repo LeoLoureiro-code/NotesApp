@@ -1,19 +1,21 @@
-import { Routes } from "@angular/router";
-import { Login } from "./login/login";
-import { Signup } from "./signup/signup";
-import { ResetPassword } from "./reset-password/reset-password";
-import { ForgotPassword } from "./forgot-password/forgot-password";
-import { AuthPage } from "./auth-page";
+
+import { Routes } from '@angular/router';
+import { AuthPage } from './auth-page';
+import { Login } from './login/login';
+import { Signup } from './signup/signup';
+import { ForgotPassword } from './forgot-password/forgot-password';
+import { ResetPassword } from './reset-password/reset-password';
 
 export const AUTH_ROUTES: Routes = [
   {
-    path: '',
+    path: 'auth',
     component: AuthPage,
     children: [
-      { path: '', component: Login },
-      { path: 'signup', component: Signup},
-      { path: 'forgot', component: ForgotPassword },
-      { path: 'reset', component: ResetPassword },
+      { path: '', redirectTo: 'login', pathMatch: 'full' }, 
+      { path: 'login', component: Login },
+      { path: 'signup', component: Signup },
+      { path: 'forgot-password', component: ForgotPassword },
+      { path: 'reset-password', component: ResetPassword },
     ],
   },
 ];
